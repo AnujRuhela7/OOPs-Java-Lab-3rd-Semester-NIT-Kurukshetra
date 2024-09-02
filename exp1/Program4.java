@@ -1,5 +1,7 @@
 package exp1;
 
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Scanner;
 
 public class Program4
@@ -7,42 +9,33 @@ public class Program4
     public static void main(String[] args)
     {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Input Array : ");
-        String inputArr = sc.nextLine();
+        Map<Integer, Integer> frequency = new HashMap<>();
 
-        String[] arr = inputArr.split(" ");
-        int[] array = new int[arr.length-1];
+        System.out.println("Enter even integers in the range 2 to 100 (enter -1 to end):");
 
-        for(int i = 0; i < array.length; i++)
+        while (true)
         {
-            if(Integer.parseInt(arr[i]) == -1)
+            System.out.print("Enter an even integer (-1 to end): ");
+            int num = sc.nextInt();
+
+            if (num == -1)
             {
                 break;
             }
-            else
+
+            if (num < 2 || num > 100 || num % 2 != 0)
             {
-                array[i] = Integer.parseInt(arr[i]);
+                System.out.println("Please enter a valid even integer between 2 and 100.");
+                continue;
             }
+
+            frequency.put(num, frequency.getOrDefault(num, 0) + 1);
         }
 
-        System.out.println("Converted Array : ");
-        for (int element : array)
+        System.out.println("\nCounts of even integers entered:");
+        for (Map.Entry<Integer, Integer> map : frequency.entrySet())
         {
-            System.out.print(element + " ");
-        }
-
-        int[] count = new int[101];
-        for(int i = 0; i < array.length; i++)
-        {
-            count[array[i]]++;
-        }
-
-        System.out.println("Frequency of each element : ");
-        {
-            for (int i = 0; i < array.length; i++)
-            {
-                System.out.println(array[i] + " : " + count[array[i]]);
-            }
+            System.out.println(map.getKey() + ": " + map.getValue() + " occurrence");
         }
     }
 }

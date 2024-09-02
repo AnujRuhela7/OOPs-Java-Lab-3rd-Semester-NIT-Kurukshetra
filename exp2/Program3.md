@@ -1,4 +1,4 @@
-The second program demonstrates the use of various methods provided by the `StringBuilder` class in Java. Here’s an explanation of the concepts behind the program:
+The third program demonstrates the use of various methods provided by the `StringBuilder` class in Java. Here’s an explanation of the concepts behind the program:
 
 ### 1. **StringBuilder Class Overview:**
 

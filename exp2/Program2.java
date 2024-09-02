@@ -15,7 +15,6 @@ public class Program2
         // Create a new Dog reference and assign it to spot's object
         Dog anotherDog = spot;
 
-
         // Compare references using ==
         System.out.println("\nComparing references using ==:");
         System.out.println("spot == scruffy: " + (spot == scruffy));

@@ -2,8 +2,8 @@ package exp2;
 
 public class Program3
 {
-
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         // Creating a StringBuilder object with an initial string
         StringBuilder sb = new StringBuilder("Hello");
 
