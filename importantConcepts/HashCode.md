@@ -1,7 +1,3 @@
-Here's the explanation formatted for a `.md` file:
-
----
-
 ## Importance of `hashCode()` Method in Java
 
 The `hashCode()` method in Java is crucial for optimizing performance and maintaining the integrity of certain data structures, such as hash-based collections. Understanding its importance helps in writing efficient and correct Java programs.
