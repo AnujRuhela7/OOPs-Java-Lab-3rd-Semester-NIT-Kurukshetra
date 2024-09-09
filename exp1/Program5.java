@@ -21,6 +21,7 @@ public class Program5
 
         int cSum = 0;
         int maxSum = Integer.MIN_VALUE;
+        int maxTillNow = Integer.MIN_VALUE;
 
         for(int i = 0; i < size; i++)
         {
@@ -31,12 +32,14 @@ public class Program5
                 maxSum = cSum;
             }
 
+            maxTillNow = Math.max(maxTillNow, maxSum);
+
             if(cSum < 0)
             {
                 cSum = 0;
             }
         }
 
-        System.out.println("Maximum Sum : " + maxSum);
+        System.out.println("Maximum Sum : " +(maxSum == 0 ? maxTillNow : maxSum));
     }
 }
