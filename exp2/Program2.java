@@ -68,6 +68,15 @@ class Dog
         Dog otherDog = (Dog) obj;
         return name.equals(otherDog.name) && says.equals(otherDog.says);
     }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + name.hashCode();
+        result = 31 * result + says.hashCode();
+        return result;
+    }
+
 }
 
 //        spot says: Ruff!
